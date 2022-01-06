@@ -1,0 +1,109 @@
+:root {
+  /* Color Reference */
+  --background-color-page: #EAEAEA;
+  --background-color-recipe: #FFFFFF;
+  --color-titles-and-subtitles: #1B1B1B;
+  --color-footer-and-caption-image: #8F8F8F;
+  --color-other-texts: #39393A;
+
+  /* Font Reference */
+  --font-default: 'Roboto', sans-serif;
+
+  /* Font Size Reference */
+  --title-font-size: 1.75rem;
+  --subtitle-font-size: 1.25rem;
+  --list-and-paragraph-font-size: 1rem;
+  --footer-and-caption-image-font-size: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color-page);
+  font-family: var(--font-default);
+}
+
+footer {
+  bottom: 0;
+  text-align: center;
+  font-size: var(--footer-and-caption-image-font-size);
+  color: var(--color-footer-and-caption-image);
+  margin-bottom: 40px;
+}
+
+.recipe-area {
+  background-color: var(--background-color-recipe);
+  width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.recipe-area .section-coffee {
+  margin-bottom: 40px;
+}
+
+.recipe-area .section-coffee h1 {
+  font-size: var(--title-font-size);
+  color: var(--color-titles-and-subtitles);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recipe-area .section-coffee figure img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition-duration: 1s;
+}
+
+.recipe-area .section-coffee figure img:hover {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.recipe-area .section-coffee figure {
+  color: var(--color-footer-and-caption-image);
+  font-size: var(--footer-and-caption-image-font-size);
+  text-align: right;
+}
+
+.recipe-area .section-ingredients,
+.recipe-area .section-preparation,
+.recipe-area .section-information {
+  margin-bottom: 40px;
+}
+
+.recipe-area .section-ingredients h2,
+.recipe-area .section-preparation h2,
+.recipe-area .section-information h2 {
+  font-size: var(--subtitle-font-size);
+  color: var(--color-titles-and-subtitles);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.recipe-area section:last-child {
+  margin-bottom: 0;
+}
+
+.recipe-area .section-ingredients ul,
+.recipe-area .section-preparation ol {
+  line-height: 2rem;
+  list-style-position: inside;
+  color: var(--color-other-texts);
+  font-size: var(--list-and-paragraph-font-size);
+}
